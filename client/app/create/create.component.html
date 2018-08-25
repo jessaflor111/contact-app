@@ -1,0 +1,96 @@
+<div class="container primary-font">
+  <div class="row text-center m-1 py-3">
+    <div class="col col-4 pr-5">
+      <button class="btn btn-link">Cancel</button>
+    </div>
+    <div class="col col-4 p-0">
+      <button class="btn btn-light">New Contact</button>
+    </div>
+    <div class="col col-4 px-5">
+      <button class="btn btn-link donelink" (click)="postFunction()">Done</button>
+    </div>
+  </div>
+  <!-- Profile Picture -->
+  <div class="row">
+    <div class="col col-4">
+      <img src="../../assets/userprofile.png" width="50%">
+    </div>
+    <div class="col col-8">
+      <div class="row">
+        <div class="col">
+          <div class="input-group input-group-sm mb-3">
+            <input id="firstName" type="text" [(ngModel)]="this.newContact.createFirstName" class="form-control" placeholder="First Name" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="input-group input-group-sm mb-3">
+            <input type="text" [(ngModel)]="this.newContact.createLastName" class="form-control" placeholder="Last Name" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="input-group input-group-sm mb-3">
+            <input type="text" class="form-control" placeholder="Company" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Add Phone -->
+  <div class="row m-1">
+      <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-plus-circle plus-sign"></i></span>
+          </div>
+          <input type="text" [(ngModel)]="this.newContact.createPhone" class="form-control" placeholder="add phone" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+        </div>
+  </div>
+  <!-- Add Email -->
+  <div class="row m-1">
+      <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-plus-circle plus-sign"></i></span>
+          </div>
+          <input type="text" [(ngModel)]="this.newContact.createEmail"class="form-control" placeholder="add email" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+        </div>
+  </div>
+  <!-- Add Url -->
+  <div class="row m-1">
+      <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-plus-circle plus-sign"></i></span>
+          </div>
+          <input type="text" class="form-control" placeholder="add url" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+        </div>
+  </div>
+  <!-- Add Birthday -->
+  <div class="row m-1">
+      <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-plus-circle plus-sign"></i></span>
+          </div>
+          <input type="text" [(ngModel)]="this.newContact.createDob" class="form-control" placeholder="add birthday" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+        </div>
+  </div>
+  <!-- Add Social Profile -->
+  <div class="row m-1">
+      <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-plus-circle plus-sign"></i></span>
+          </div>
+          <input type="text" class="form-control" placeholder="add social profile" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+        </div>
+  </div>
+  <!-- Add Related Name -->
+  <div class="row m-1">
+      <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-plus-circle plus-sign"></i></span>
+          </div>
+          <input type="text" class="form-control" placeholder="add related name" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+        </div>
+  </div>
+</div>

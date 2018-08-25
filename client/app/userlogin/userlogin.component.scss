@@ -1,0 +1,25 @@
+@import '../app.component.scss';
+
+h1 {
+  font-family: $font-stack-primary;
+}
+
+.card {
+  font-family: $font-stack-secondary;
+}
+// mobile-friendly
+@media only screen and (max-width: 600px){
+  .input-align {
+    text-align: center;
+  }
+
+}
+// fullscreen
+@media only screen and (min-width: 600px) {
+  .padding-card {
+    padding:20vh;
+  }
+  .padding-card-width {
+    padding: 5vh 10vh 5vh 10vh;
+  }
+}

@@ -1,0 +1,42 @@
+<div class="cotainer">
+  <div class="row text-center">
+    <div class="col">
+        <div class="alert alert-primary alert-dismissable fade show thisalert" role="alert">Welcome User!
+        <button type="button" class="close" data-dimiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+    </div>
+  </div>
+  <div class="row text-center secondary-font m-1 p-2">
+    <div class="col">
+      <button class="btn btn-link">Groups</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-light">Contacts</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-link">+</button>
+    </div>
+  </div>
+  <div class="row  secondary-font text-center">
+    <div class="col float-left m-3">
+      <input type="text" [(ngModel)]="hermes.searchedContact" (keyup.enter)="hermes.searchContact()" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+    </div>
+  </div>
+
+  <div class="row text-left m-1" *ngFor="let contact of hermes.searchResults">
+    <div class="col">
+      <h5>{{ hermes.searchedContact }}</h5>
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action m-0 active">{{ contact.FirstName }} {{contact.LastName }}</li>
+      </ul>
+    </div>
+  </div>
+  <!-- testing purposes -->
+  <div class="row text-left secondary-font m-1" *ngFor="let contact of hermes.contacts">
+    <div class="col">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action">{{ contact.FirstName }} {{contact.LastName }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

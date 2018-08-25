@@ -1,0 +1,33 @@
+@import '../app.component.scss';
+
+h1 {
+  font-family: $font-stack-primary;
+}
+
+p {
+  font-family: $font-stack-secondary;
+}
+
+button {
+  font-family: $font-stack-secondary;
+}
+
+
+@media only screen and (max-width: 600px){
+  .bgbgbg {
+    background-image: url('../../assets/usersSM.png') !important;
+    background-size: 110%;
+  }
+  .containthisbox {
+    height:20vh;
+    width: 30vh;
+  }}
+  @media only screen and (min-width: 600px) {
+  .bgbgbg {
+    background-image: url('../../assets/usersmulti.png') !important;
+    background-size: 100%;
+  }
+  .containthisbox {
+  height:33vh;
+  width: 36vh;
+}}

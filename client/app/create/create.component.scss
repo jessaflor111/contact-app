@@ -1,0 +1,15 @@
+@import '../app.component.scss';
+
+.donelink {
+    color: lightgrey !important;
+}
+.donelink:hover {
+    color: blue !important;
+    text-decoration: none;
+}
+.plus-sign {
+    color: green;
+}
+.primary-font {
+  font-family: $font-stack-primary;
+}
