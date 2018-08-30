@@ -3,7 +3,9 @@
 h1 {
   font-family: $font-stack-primary;
 }
-
+.bg-doodle {
+  background-image: url('../../assets/bg-doodle2.png');
+}
 .card {
   font-family: $font-stack-secondary;
 }
@@ -17,9 +19,12 @@ h1 {
 // fullscreen
 @media only screen and (min-width: 600px) {
   .padding-card {
-    padding:20vh;
+    padding:5vh;
   }
   .padding-card-width {
     padding: 5vh 10vh 5vh 10vh;
+  }
+  .box {
+    height: 10vh;
   }
 }

@@ -8,6 +8,7 @@ const connectMongo = require('connect-mongo');
 const session = require('express-session');
 const config = require('./server/config');
 const MongoStore = connectMongo(session);
+const cors = require('cors');
 // const db = require('./config');
 
 // const mongooseConnectionPromise = mongoose.connect(config.mongo.connection.uri, { useNewUrlParser: true });
@@ -22,11 +23,27 @@ mongoose.connection.on('error',  (err) => {
 });
 
 
-
 // Get our API Routes
 const routes = require('./server/routes');
 
 const app = express();
+
+corsOptions = {
+  origin: ['https://localhost:4200'],
+  credentials: true
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Headers', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  if (req === 'OPTIONS') {
+    res.header('Access-Control-Alloq-Methods', 'GET, PUT, POST, PATCH');
+    return res.status(200).json({});
+  }
+  next();
+});
 
 // Parser for POST data;
 app.use(bodyParser.json());

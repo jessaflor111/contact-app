@@ -7,12 +7,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HermesService {
   constructor(public http: HttpClient, private router: Router) {
-    this.router = router;
-    this.http = http;
-    this.http.get('http://localhost:3000/get-contact').subscribe(response => {
-      console.log(response);
-      this.contacts = response;
-    });
+    // this.router = router;
+    // this.http = http;
+    // this.http.get('http://localhost:3000/get-contact').subscribe(response => {
+    //   console.log(response);
+    //   this.contacts = response;
+    // });
     // this.http.get('http://localhost:3000/get-contact').subscribe(response => {
     //   console.log(response);
     //   this.contacts = response;

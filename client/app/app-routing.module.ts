@@ -7,12 +7,15 @@ import { UpdateComponent } from './update/update.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { SignupComponent } from './signup/signup.component';
+import { AuthGuard } from './guards/auth.guard';
+
 
 
   const routes: Routes = [
     {
       path: 'create',
-      component: CreateComponent
+      component: CreateComponent,
+      canActivate: [AuthGuard]
     },
     {
       path: 'welcome',
@@ -28,19 +31,22 @@ import { SignupComponent } from './signup/signup.component';
     },
     {
       path: 'home',
-      component: HomeComponent
+      component: HomeComponent,
+      canActivate: [AuthGuard]
     },
     {
       path: 'read',
-      component: ReadComponent
+      component: ReadComponent,
+      canActivate: [AuthGuard]
     },
     {
       path: 'update',
-      component: UpdateComponent
+      component: UpdateComponent,
+      canActivate: [AuthGuard]
     },
     {
       path: '',
-      redirectTo: '/home',
+      redirectTo: '/welcome',
       pathMatch: 'full'
     }
   ];

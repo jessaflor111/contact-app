@@ -6,7 +6,18 @@ $font-stack-secondary: 'Montserrat', sans-serif;
 $font-bold: 700;
 $font-semi-bold: 600;
 
+
 ul {
   font-family: $font-stack-secondary;
+}
+.shadowHere {
+  text-shadow: 1px 1px 2px gray;
+}
+.shadowLess {
+  text-shadow: 1px 1px 1px gray;
+}
+
+.bgcolor {
+  background-color: transparent !important;
 }
 

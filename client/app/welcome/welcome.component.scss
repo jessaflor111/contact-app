@@ -12,6 +12,26 @@ button {
   font-family: $font-stack-secondary;
 }
 
+.headerbg {
+  background-color: white;
+  opacity: .85;
+  width: 45vh;
+}
+
+.buttonbg {
+  background-color: white;
+  opacity: .90;
+  width: 15vh;
+}
+
+.bg-doodle {
+  background-image: url('../../assets/bg-doodle2.png');
+}
+
+.bgcolor1 {
+  background-color: white;
+  opacity: .80;
+}
 
 @media only screen and (max-width: 600px){
   .bgbgbg {
@@ -24,10 +44,13 @@ button {
   }}
   @media only screen and (min-width: 600px) {
   .bgbgbg {
-    background-image: url('../../assets/usersmulti.png') !important;
+    background-image: url('../../assets/usersmultimore.png') !important;
     background-size: 100%;
   }
+  .box {
+    height: 10vh;
+  }
   .containthisbox {
-  height:33vh;
-  width: 36vh;
+  height:30vh;
+  width: 155vh;
 }}
