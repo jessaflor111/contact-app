@@ -42,9 +42,30 @@ const UserSchema = new Schema({
     default: 'user'
   },
   salt: String,
-  contacts: {
-
-  }
+  // contacts: {
+  //     firstName: {
+  //       type: String,
+  //       required: true
+  //     },
+  //     lastName: {
+  //       type: String,
+  //       required: true
+  //     },
+  //     phone: {
+  //       type: String,
+  //       required: true
+  //     },
+  //     email: {
+  //       type: String,
+  //       lowercase: true,
+  //     },
+  //     company: {
+  //       type: String
+  //     },
+  //     dob: {
+  //       type: String
+  //     }
+  //   }
 });
 
 /**
