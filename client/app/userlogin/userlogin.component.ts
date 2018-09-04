@@ -25,10 +25,9 @@ export class UserloginComponent implements OnInit {
   login() {
     console.log('this is the forms cred' + this.credentials);
     console.log('this is returnUrl' + this.returnURL);
-    this.auth.login(this.credentials.email, this.credentials.pwd).subscribe(console.log, data => {
+    this.auth.login(this.credentials.email, this.credentials.pwd).toPromise().then((data: any) => {
       // console.log('this is the first data' + data);
       // this.returnData = data;
-
       if ( data.message === false ) {
          this.credentials.email = '';
          this.credentials.pwd = '';
