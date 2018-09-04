@@ -1,7 +1,7 @@
 // 'use strict';
 // const Contact = require('./contact.model');
 // // const jwt = require('jsonwebtoken');
-// const config = require('../../config');
+// // const config = require('../../config');
 
 // /**
 //  * Handles validation errors and returns the error to the user.
@@ -66,7 +66,7 @@
 //  * @param {Express.Request} req - Express Request object with the Request.body contaning the data
 //  * @param {*} res  - Express Response object
 //  */
-// function create(req, res) {
+// const postCreate = (req, res) => {
 //   let newContact = new Contact(req.body);
 //   return newContact.save(function (err, contact) {
 //     if (err) {
@@ -80,8 +80,8 @@
 //       _id: contact._id,
 //      });
 
-//   });
-// }
+// //   });
+// // }
 
 
 // // /**
@@ -137,4 +137,4 @@
 // //   }).catch(validationError(res));
 // // }
 
-// module.exports = { create };
+// module.exports = {postCreate};

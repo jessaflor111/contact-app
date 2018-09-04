@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 const Schema = mongoose.Schema;
-const crypto = require('crypto');
+
 
 const ContactSchema = new Schema({
   firstName: {
@@ -36,4 +36,4 @@ const ContactSchema = new Schema({
 
 
 
-module.exports = mongoose.model('Contact', ContactSchema, 'contacts');
+module.exports = mongoose.model('Contact', ContactSchema);

@@ -9,6 +9,12 @@ h1 {
 .card {
   font-family: $font-stack-secondary;
 }
+.header-signin-card, .footer-signin-card {
+  background-color: $color-primary;
+}
+.card-body-signin {
+  background-color: $background-transparent;
+}
 // mobile-friendly
 @media only screen and (max-width: 600px){
   .input-align {
@@ -19,7 +25,7 @@ h1 {
 // fullscreen
 @media only screen and (min-width: 600px) {
   .padding-card {
-    padding:5vh;
+    padding: 0vh 15vh 0vh 15vh;
   }
   .padding-card-width {
     padding: 5vh 10vh 5vh 10vh;
