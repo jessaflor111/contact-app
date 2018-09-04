@@ -28,9 +28,9 @@ const routes = require('./server/routes');
 
 const app = express();
 
-corsOptions = {
-  origin: ['https://localhost:4200'],
-  credentials: true
+var corsOptions = {
+  origin: ['http://localhost:4200'],
+  credentials: false
 };
 
 app.use(cors(corsOptions));

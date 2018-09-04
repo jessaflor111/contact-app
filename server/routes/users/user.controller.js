@@ -111,11 +111,11 @@ function login(req, res) {
     }
     user.authenticate(req.body.password, function (authErr, authenticated) {
       if (authErr) {
-        res.send(authErr);
+        return res.send(authErr);
       }
       if (!authenticated) {
         // Return false, password invalid
-        res.send({
+        return res.send({
           message: false
         });
       } else {
@@ -127,7 +127,7 @@ function login(req, res) {
         });
         // Let's return the created JSON Web token with some fields from the user Model
         // we can use these fields to populate in the application who this logged in user is.
-        res.json({
+        return res.json({
           token: token,
           _id: user._id,
           name: user.name,
